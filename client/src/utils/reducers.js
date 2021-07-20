@@ -9,9 +9,16 @@ import {
   CLEAR_CART,
   TOGGLE_CART,
 } from './actions';
-import { useReducer } from 'react';
 
-export const reducer = (state, action) => {
+const initialState = {
+  products: [],
+  cart: [],
+  cartOpen: false,
+  categories: [],
+  currentCategory: '',
+}
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     // if action type value is the value of `UPDATE_PRODUCTS`, return a new sate object with an updated products array
     case UPDATE_PRODUCTS:
@@ -88,6 +95,4 @@ export const reducer = (state, action) => {
 };
 
 //used to initialize our global state object and provied us with the functionality for updating that state
-export function useProductReducer(initialState) {
-  return useReducer(reducer, initialState);
-}
+export default reducer;
