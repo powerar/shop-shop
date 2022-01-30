@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
     "react-redux": "^7.2.4",
     "redux": "^4.1.0",
     "stripe": "^8.161.0"
