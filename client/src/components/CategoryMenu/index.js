@@ -26,14 +26,14 @@ function CategoryMenu() {
         type: UPDATE_CATEGORIES,
         categories: categoryData.categories,
       });
-      categoryData.categories.forEach(category => {
+      categoryData.categories.forEach((category) => {
         idbPromise('categories', 'put', category);
       });
     } else if (!loading) {
-      idbPromise('categories', 'get').then(categories => {
+      idbPromise('categories', 'get').then((categories) => {
         dispatch({
           type: UPDATE_CATEGORIES,
-          categories: categories
+          categories: categories,
         });
       });
     }
@@ -55,6 +55,7 @@ function CategoryMenu() {
           onClick={() => {
             handleClick(item._id);
           }}
+          className="waves-effect waves-light btn-small #ef6c00 orange darken-3"
         >
           {item.name}
         </button>

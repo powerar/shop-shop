@@ -47,7 +47,12 @@ function ProductItem(item) {
         </div>
         <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <button
+        className="waves-effect waves-light btn-small #ef6c00 orange darken-3"
+        onClick={addToCart}
+      >
+        Add to cart
+      </button>
     </div>
   );
 }
